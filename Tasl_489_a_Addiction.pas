@@ -24,7 +24,6 @@ end;
 
 
 
-
 var
 
   f_integer, g : Text;
