@@ -6,8 +6,6 @@ var
 
   f_FIO, g : Text;
   
-  //fam, name, Otch : Array[1..32] of string;
-  
   temp, fam, name, otch, iof : string;
   
   i, fam_ind, name_ind, fio_ind, ind : integer;  
