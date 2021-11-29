@@ -1,4 +1,4 @@
-﻿program Task_519_a;
+﻿program Task_531;
 
 
 var 
