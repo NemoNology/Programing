@@ -6,20 +6,22 @@ function Is_One(arr : Array of boolean; arr_size : integer): boolean;
 
 var 
 
-  i, k : integer;                                // Счётчики
+  i, k : integer;                       // Счётчики
   
 begin
+
+  Is_One := False;                      // "Обнуляем" результат
 
   for i := 0 to arr_size - 1 do
    
       if arr[i] then
         
-        k := k + 1;
+        k := k + 1;                     // Вычисляем кол-во людей оставшихся в кругу
       
     
   if k = 1 then
         
-    Is_One := True;
+    Is_One := True;                     // Если остался один, то функция - "Истина"
 
 end;
 
@@ -102,7 +104,7 @@ begin
 
   for i := 0 to n - 1 do      
     
-    x[i] := True;                                // Единица означает, что человек стоит в 1-ом кругу
+    x[i] := True;                             // Единица означает, что человек стоит в 1-ом кругу
   
   
   writeln('Result: ', Take_Out_Task_545(x, n, m));

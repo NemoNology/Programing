@@ -2,45 +2,13 @@
 
 
 
-function pow(n : real; st : integer): real; // Возведение в степень
-
-var
-
-    i : integer;                        // i - счётчик для циклов
-    nn : real;                          // nn - переменная для результата
-
-begin
-
-    nn := 1;                            // Присваиваем переменную
-
-    for i := 1 to st do                 // Перемножаем определённое кол-во раз
-                                        //
-      nn := n * nn;                    // - возводим в степень
-
-    if st < 0 then                      // Если степень отрицательная, то
-                                        // "возвращаем" 1 делённое на результат
-      nn := 1 / nn
-
-    else if st = 0 then                      // Если значение степени нулевое
-                                        // то результат = 1
-      nn := 1;
-      
-    //else if st = 1 then
-    
-    //  nn := n;
-
-    pow := nn;
-
-end;
-
-
-
 function ctoi(sym : char): integer;    // Char to Integer
 
 begin                       //###### Начало функции ctoi
 
   case sym of
-  
+    
+    '.': ctoi := 0;
     '0': ctoi := 0; 
     '1': ctoi := 1;
     '2': ctoi := 2;
@@ -167,6 +135,12 @@ begin                 //###### Начало главного блока/моду
   
   readln(s);
   
-  writeln(stoi(s));     // Использование функции...
+  if Is_there_symbol('.', s) then     // Если пользователь ввёл нецелое число, то:
+    
+    writeln(stor(s))      // Использование функции sting to real
+  
+  else                    // А если целое число, то:
+  
+    writeln(stoi(s));     // Использование функции sting to integer
   
 end.

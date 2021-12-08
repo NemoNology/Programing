@@ -5,7 +5,7 @@ var
 
   i, n : integer;                             // n - вводимое значение n, i - счётчик
   
-  x : Array of integer;                       // Массив для переменных а
+  x, res : Array of integer;                  // Массив для переменных а, res - результирующий массив
   
 begin
 

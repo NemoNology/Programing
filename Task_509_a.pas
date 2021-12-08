@@ -32,9 +32,9 @@ const
 
 var
 
-  f_cars : Text;
+  f_cars : Text;                            // Сам текстовый файл
   
-  temp, matching, num, fam, mark : string;  // temp - строка файла, matching - строка сравнения марок, num - омер авто, fam - владелец авто, mark - выбранная марка для сравнения
+  temp, matching, num, fam, mark : string;  // temp - переменная для записи строки из файла, matching - строка сравнения марок, num - номер авто, fam - владелец авто, mark - выбранная марка для сравнения
                                             //
   i, nom : integer;                         // Счётчик и переменная для будущего сравнения
                                             //
