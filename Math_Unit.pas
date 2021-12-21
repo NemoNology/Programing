@@ -23,6 +23,10 @@ interface //####################################################################
   function real_pow(n : real; st : integer): real;
   
   
+  /// Get_Random_Real_Value - GRRV - Фунция получения случайного числа типа real, максимум которой является значение max_value
+  function GRRV(const max_value : integer): real;
+  
+  
     
 implementation //###############################################################
 
@@ -159,6 +163,15 @@ implementation //###############################################################
   
   
     end; 
+  
+  
+  function GRRV(const max_value : integer): real;
+    
+    begin
+    
+      result := (random(max_value) - (max_value / 2)) / random(1, 10);
+    
+    end;
   
   
 begin //########################################################################
